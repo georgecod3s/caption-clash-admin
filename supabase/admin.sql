@@ -103,7 +103,7 @@ create policy "caption-images: admin select" on storage.objects for select to au
 -- trigger above, so the project owner can flip the flag for themselves.
 update public.profiles
 set is_superadmin = true
-where id in (select id from auth.users where email = 'georgedanielneira@gmail.com');
+where id in (select id from auth.users where email = 'gdn2112@columbia.edu');
 
 select p.id, u.email, p.is_superadmin
 from public.profiles p join auth.users u on u.id = p.id
