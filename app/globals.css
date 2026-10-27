@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+:root {
+  --background: #09090b;
+  --foreground: #fafafa;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.card {
+  border: 1px solid #27272a;
+  background: rgba(24, 24, 27, 0.7);
+  border-radius: 1rem;
+}
+
+.input {
+  width: 100%;
+  border-radius: 0.6rem;
+  border: 1px solid #3f3f46;
+  background: #18181b;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  outline: none;
+}
+.input:focus { border-color: #fbbf24; }
+
+.btn {
+  border-radius: 0.6rem;
+  padding: 0.45rem 0.9rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: background 0.15s;
+}
+.btn-primary { background: #fbbf24; color: #000; }
+.btn-primary:hover { background: #f59e0b; }
+.btn-ghost { background: #27272a; }
+.btn-ghost:hover { background: #3f3f46; }
+.btn-danger { background: rgba(239, 68, 68, 0.15); color: #fca5a5; }
+.btn-danger:hover { background: rgba(239, 68, 68, 0.3); }
+
+.bar-grow { animation: grow 0.8s ease-out both; transform-origin: bottom; }
+@keyframes grow { from { transform: scaleY(0); } to { transform: scaleY(1); } }
